@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mlxiao</groupId>
-	<artifactId>mockserver</artifactId>
+	<artifactId>mock</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>mockserver</name>
+	<name>mock</name>
 	<description></description>
 
 	<parent>
@@ -81,6 +81,5 @@
 			<url>https://repo.spring.io/libs-release</url>
 		</pluginRepository>
 	</pluginRepositories>
-
 
 </project>
