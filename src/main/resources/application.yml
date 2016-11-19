@@ -34,3 +34,10 @@ spring:
 
 server:
   port: 9310
+
+#myProps:
+#  qiniu:
+#    accessKey: f-4qhQ_bGUQVhEryo-XUF89Njqeg1SgDJ2uKVv3Y
+#    secretKey: 9O1xieJDu76UxsRPkt9g-v-oMbh9wgrC5dpIwPKd
+#    BUCKET: mp
+#    DOMAIN: http://odr8zoa0w.bkt.clouddn.com
