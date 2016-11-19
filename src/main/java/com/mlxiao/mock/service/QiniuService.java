@@ -20,13 +20,13 @@ public class QiniuService {
   static final String ACCESS_KEY = "f-4qhQ_bGUQVhEryo-XUF89Njqeg1SgDJ2uKVv3Y";
   static final String SECRET_KEY = "9O1xieJDu76UxsRPkt9g-v-oMbh9wgrC5dpIwPKd";
   static final String BUCKET = "micropoplar";
-  static final String DOMAIN = "http://odr8zoa0w.bkt.clouddn.com";
+  static final String DOMAIN = "http://ogw9ek3ff.bkt.clouddn.com";
 
   private UploadManager uploadManager = new UploadManager();
   private Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
 
-  public String getUpToken(String bucket) {
-    return auth.uploadToken(bucket);
+  public String getUpToken() {
+    return auth.uploadToken(BUCKET);
   }
 
   public String uploadImg(MultipartFile file) throws IOException {
@@ -37,7 +37,7 @@ public class QiniuService {
     Response res;
 
     try {
-      res = uploadManager.put(fileBytes, key, getUpToken(BUCKET));
+      res = uploadManager.put(fileBytes, key, getUpToken());
     } catch (QiniuException e) {
       throw new UploadFailed(e.response.bodyString());
     }

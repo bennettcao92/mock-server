@@ -5,7 +5,6 @@ import com.mlxiao.mock.service.QiniuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,8 +18,8 @@ public class QiniuController {
   private QiniuService qiniuService;
 
   @GetMapping("/uptoken")
-  public QiniuUpToken getUptoken(@RequestParam(name = "bucket", defaultValue = "micropoplar") String bucket) {
-    return new QiniuUpToken(qiniuService.getUpToken(bucket));
+  public QiniuUpToken getUptoken() {
+    return new QiniuUpToken(qiniuService.getUpToken());
   }
 
 }

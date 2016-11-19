@@ -8,9 +8,9 @@ import java.util.UUID;
 
 public class Utils {
   public static String generateUniqueKey() {
-    return new SimpleDateFormat("yyMMddHHmmss").format(new Date())
-            + "-"
-            + UUID.randomUUID().toString();
+    return UUID.randomUUID().toString()
+            + "-" +
+            new SimpleDateFormat("yyMMddHHmmss").format(new Date());
   }
 
   public static String getExtension(MultipartFile file) {
